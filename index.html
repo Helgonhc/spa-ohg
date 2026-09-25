@@ -628,91 +628,295 @@
     </section>
 
     <!-- Sectors Section -->
-    <section id="setores" class="py-12 sm:py-16 bg-white border-b border-slate-200">
+    <section id="setores" class="py-14 sm:py-20 bg-slate-50/70 border-b border-slate-200/80 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3 mb-8 sm:mb-12">
-                <span class="text-brand-700 font-bold text-xs sm:text-sm tracking-wider uppercase bg-purple-100 px-3.5 py-1 rounded-full inline-block">Nossos Setores</span>
-                <h2 class="text-2xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-10 sm:mb-14">
+                <span class="text-brand-700 font-extrabold text-xs sm:text-sm tracking-wider uppercase bg-purple-100 border border-purple-200 px-4 py-1.5 rounded-full inline-flex items-center gap-2 shadow-xs">
+                    <i class="fa-solid fa-sparkles text-amber-500"></i>
+                    <span>Tudo o que você precisa em Capitólio</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-slate-900 tracking-tight">
                     O que você encontra no Spaço HG
                 </h2>
-                <p class="text-slate-600 text-sm sm:text-lg font-medium">
-                    Variedade de marcas e produtos selecionados para atender você e sua família em Capitólio.
+                <p class="text-slate-600 text-sm sm:text-lg font-medium leading-relaxed">
+                    Do material escolar do seu filho à manutenção técnica do seu computador. Confira nossos setores completos com estoque renovado.
                 </p>
             </div>
 
             <!-- Filter Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
-                <button onclick="filterSector('todos')" class="sector-tab-btn active bg-brand-600 text-white font-extrabold text-xs sm:text-base px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl transition-all shadow-sm">
-                    Todos os Setores
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 sm:mb-12">
+                <button onclick="filterSector('todos')" class="sector-tab-btn active bg-brand-600 text-white font-black text-xs sm:text-sm px-5 py-3 rounded-2xl transition-all shadow-md shadow-brand-500/20 hover:scale-[1.02]">
+                    ✨ Todos os Setores
                 </button>
-                <button onclick="filterSector('papelaria')" class="sector-tab-btn bg-slate-100 hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-base px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-slate-200 transition-all">
-                    ✏️ Papelaria
+                <button onclick="filterSector('papelaria')" class="sector-tab-btn bg-white hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-sm px-4 sm:px-5 py-3 rounded-2xl border border-slate-200 transition-all hover:border-purple-300 hover:scale-[1.02]">
+                    ✏️ Papelaria & Escola
                 </button>
-                <button onclick="filterSector('livraria')" class="sector-tab-btn bg-slate-100 hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-base px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-slate-200 transition-all">
+                <button onclick="filterSector('escritorio')" class="sector-tab-btn bg-white hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-sm px-4 sm:px-5 py-3 rounded-2xl border border-slate-200 transition-all hover:border-purple-300 hover:scale-[1.02]">
+                    💼 Escritório & Gráfica
+                </button>
+                <button onclick="filterSector('livraria')" class="sector-tab-btn bg-white hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-sm px-4 sm:px-5 py-3 rounded-2xl border border-slate-200 transition-all hover:border-purple-300 hover:scale-[1.02]">
                     📖 Livraria Religiosa
                 </button>
-                <button onclick="filterSector('presentes')" class="sector-tab-btn bg-slate-100 hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-base px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-slate-200 transition-all">
-                    🎁 Presentes
+                <button onclick="filterSector('presentes')" class="sector-tab-btn bg-white hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-sm px-4 sm:px-5 py-3 rounded-2xl border border-slate-200 transition-all hover:border-purple-300 hover:scale-[1.02]">
+                    🎁 Presentes & Mimos
+                </button>
+                <button onclick="filterSector('informatica')" class="sector-tab-btn bg-white hover:bg-purple-50 text-slate-800 font-bold text-xs sm:text-sm px-4 sm:px-5 py-3 rounded-2xl border border-slate-200 transition-all hover:border-purple-300 hover:scale-[1.02]">
+                    💻 Informática & Tech
                 </button>
             </div>
 
             <!-- Sector Grid Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6" id="sector-cards-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="sector-cards-grid">
                 
-                <!-- Card 1: Papelaria -->
-                <div class="sector-card card-service rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="papelaria">
-                    <div class="space-y-3 sm:space-y-4">
-                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-purple-100 text-brand-700 flex items-center justify-center text-2xl sm:text-3xl font-bold">
-                            <i class="fa-solid fa-pen-clip"></i>
+                <!-- Card 1: Papelaria Escolar -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="papelaria">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-purple-100 text-purple-700 tracking-wider">✏️ Escola & Artes</span>
+                            <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-pen-clip"></i>
+                            </div>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-display font-extrabold text-slate-900">Papelaria Completa</h3>
-                        <p class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                            Materiais escolares completos, cadernos, mochilas, estojos, canetas especiais, papel A4 e itens de escritório.
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Papelaria Escolar & Universitária</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Kits e listas escolares completas, cadernos de 1 a 20 matérias, estojos, canetas especiais, lapiseiras e réguas.
                         </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Cadernos Tilibra</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Faber-Castell</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Stabilo & BIC</span>
+                        </div>
                     </div>
-                    <div class="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-slate-100">
-                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20consultar%20itens%20de%20Papelaria." target="_blank" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm py-2.5 sm:py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                            <span>Consultar Itens</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20consultar%20itens%20de%20Papelaria%20Escolar." target="_blank" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Consultar Lista Escolar</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Card 2: Livraria Religiosa -->
-                <div class="sector-card card-service rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="livraria">
-                    <div class="space-y-3 sm:space-y-4">
-                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-pink-100 text-pink-700 flex items-center justify-center text-2xl sm:text-3xl font-bold">
-                            <i class="fa-solid fa-book-bible"></i>
+                <!-- Card 2: Mochilas e Estojos -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="papelaria presentes">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-sky-100 text-sky-700 tracking-wider">🎒 Mochilas & Acessórios</span>
+                            <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-display font-extrabold text-slate-900">Livraria Religiosa</h3>
-                        <p class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                            Bíblias de estudo, devocionais, livros espirituais, mensagens edificantes e artigos religiosos para momentos de fé.
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Mochilas, Lancheiras & Estojos</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Mochilas com rodinhas, modelos infantis, juvenis e executivos, lancheiras térmicas e estojos organizadores.
                         </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Mochilas de Rodinha</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Lancheiras Térmicas</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Estojos Duplos</span>
+                        </div>
                     </div>
-                    <div class="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-slate-100">
-                        <a href="https://wa.me/5537999520544?text=Olá!%20Gostaria%20de%20saber%20sobre%20livros%20religiosos." target="_blank" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold text-xs sm:text-sm py-2.5 sm:py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                            <span>Consultar Títulos</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20ver%20opções%20de%20Mochilas%20e%20Estojos." target="_blank" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Ver Mochilas no WhatsApp</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Card 3: Presentes -->
-                <div class="sector-card card-service rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between" data-category="presentes">
-                    <div class="space-y-3 sm:space-y-4">
-                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl sm:text-3xl font-bold">
-                            <i class="fa-solid fa-gifts"></i>
+                <!-- Card 3: Escritório e Papéis -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="escritorio">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 tracking-wider">💼 Empresas & Papéis</span>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-folder-closed"></i>
+                            </div>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-display font-extrabold text-slate-900">Artigos para Presentes</h3>
-                        <p class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                            Artigos criativos, mimos especiais, canecas, porta-retratos e embalagens especiais para datas comemorativas.
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Material de Escritório & Papel A4</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Resmas A4 Chamex/Report, bobinas térmicas para maquininhas, pastas suspensas, grampeadores e suprimentos.
                         </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Papel A4 Resma 500fls</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Bobinas Térmicas</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Pastas & Clipes</span>
+                        </div>
                     </div>
-                    <div class="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-slate-100">
-                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20ver%20opções%20de%20presentes." target="_blank" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm py-2.5 sm:py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                            <span>Ver Opções</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20cotação%20de%20Papel%20A4%20e%20materiais%20de%20escritório." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Cotação para Empresas</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Xerox e Gráfica Rápida -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="escritorio informatica">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 tracking-wider">🖨️ Gráfica Rápida</span>
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-print"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Xerox, Impressão & Plastificação</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Impressões P&B e Coloridas em A4/A3, cópias, encadernação em espiral para apostilas e plastificação de documentos.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Impressão A4/A3 Color</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Encadernação</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Plastificação RG</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20enviar%20um%20arquivo%20para%20impressão." target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Enviar Arquivo para Impressão</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Livraria Religiosa -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="livraria">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-pink-100 text-pink-700 tracking-wider">📖 Fé & Renovação</span>
+                            <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-book-bible"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Livraria Religiosa & Devocionais</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Bíblias de estudo (NVI, ACF, NAA), devocionais diários, livros espirituais, teologia e literaturas cristãs infantis.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Bíblias de Estudo</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Devocionais Diários</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Literatura Cristã</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Gostaria%20de%20saber%20sobre%20Bíblias%20e%20livros%20religiosos." target="_blank" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Consultar Títulos de Fé</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Artigos Religiosos e Imagens -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="livraria presentes">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-rose-100 text-rose-700 tracking-wider">✝️ Devoção & Lembranças</span>
+                            <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-cross"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Artigos Religiosos & Lembranças</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Terços, crucifixos, imagens sacras, marca-páginas inspiradores e lembrancinhas especiais para momentos de devoção.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Terços & Rosários</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Imagens Sacras</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Crucifixos</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20ver%20artigos%20religiosos%20e%20terços." target="_blank" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Ver Artigos Religiosos</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 7: Presentes Criativos -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="presentes">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-amber-100 text-amber-800 tracking-wider">🎁 Mimos & Presentes</span>
+                            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Presentes Criativos & Mimos</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Canecas temáticas, garrafas térmicas em inox, porta-retratos, agendas, caixas para presentes e itens decorativos.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Canecas Temáticas</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Garrafas Inox</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Porta-Retratos</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20ver%20opções%20de%20presentes%20e%20canecas." target="_blank" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Ver Opções de Presentes</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8: Informática & Periféricos -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="informatica">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-violet-100 text-violet-700 tracking-wider">💻 Periféricos & Tech</span>
+                            <div class="w-12 h-12 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-keyboard"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Periféricos & Acessórios de PC</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Mouses ópticos e sem fio, teclados, fones de ouvido, cabos HDMI/Type-C, pendrives Kingston/SanDisk e cartões de memória.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Mouses & Teclados</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Pendrives 32GB/64GB</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Cabos HDMI & Type-C</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20consultar%20acessórios%20de%20informática." target="_blank" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Consultar Acessórios Tech</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 9: Brinquedos & Jogos -->
+                <div class="sector-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col justify-between group" data-category="presentes papelaria">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-extrabold uppercase px-3 py-1 rounded-full bg-teal-100 text-teal-800 tracking-wider">🧸 Diversão Infantil</span>
+                            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-puzzle-piece"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-700 transition-colors">Brinquedos & Jogos Educativos</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+                            Jogos de tabuleiro, quebra-cabeças, slimes, massinhas de modelar, livros de colorir e brinquedos pedagógicos.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Jogos de Tabuleiro</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Quebra-Cabeças</span>
+                            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-slate-200/60">Massinhas & Artes</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="https://wa.me/5537999520544?text=Olá!%20Quero%20ver%20brinquedos%20e%20jogos%20educativos." target="_blank" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Ver Brinquedos & Jogos</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
                     </div>
                 </div>
@@ -1077,15 +1281,18 @@
             const btns = document.querySelectorAll('.sector-tab-btn');
 
             btns.forEach(btn => {
-                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
-                btn.classList.add('bg-slate-100', 'text-slate-800');
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+                btn.classList.add('bg-white', 'text-slate-800');
             });
 
-            event.currentTarget.classList.remove('bg-slate-100', 'text-slate-800');
-            event.currentTarget.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+            if (window.event && window.event.currentTarget) {
+                window.event.currentTarget.classList.remove('bg-white', 'text-slate-800');
+                window.event.currentTarget.classList.add('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+            }
 
             cards.forEach(card => {
-                if (category === 'todos' || card.dataset.category === category) {
+                const cats = card.dataset.category ? card.dataset.category.split(' ') : [];
+                if (category === 'todos' || cats.includes(category)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
@@ -1097,8 +1304,20 @@
             const sectorsSection = document.getElementById('setores');
             if (sectorsSection) sectorsSection.scrollIntoView({ behavior: 'smooth' });
             const cards = document.querySelectorAll('.sector-card');
+            const btns = document.querySelectorAll('.sector-tab-btn');
+            
+            btns.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+                btn.classList.add('bg-white', 'text-slate-800');
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${cat}'`)) {
+                    btn.classList.remove('bg-white', 'text-slate-800');
+                    btn.classList.add('bg-brand-600', 'text-white', 'shadow-md', 'shadow-brand-500/20');
+                }
+            });
+
             cards.forEach(card => {
-                if (card.dataset.category === cat) {
+                const cats = card.dataset.category ? card.dataset.category.split(' ') : [];
+                if (cat === 'todos' || cats.includes(cat)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
