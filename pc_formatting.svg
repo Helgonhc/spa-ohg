@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#311042"/>
+    </linearGradient>
+
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#7C3AED" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="400" rx="24" fill="url(#bgGrad1)"/>
+
+  <!-- Grid Patterns -->
+  <path d="M 0,100 L 600,100 M 0,200 L 600,200 M 0,300 L 600,300 M 150,0 L 150,400 M 300,0 L 300,400 M 450,0 L 450,400" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Laptop Body -->
+  <g filter="url(#glowEffect)">
+    <!-- Screen Base Frame -->
+    <rect x="130" y="60" width="340" height="220" rx="16" fill="#1E293B" stroke="#475569" stroke-width="3"/>
+    
+    <!-- Screen Display Area -->
+    <rect x="142" y="72" width="316" height="196" rx="10" fill="url(#screenGrad)"/>
+
+    <!-- Windows / Format Icon & Progress Bar inside Screen -->
+    <g transform="translate(300, 140)">
+      <!-- Windows OS Grid Logo -->
+      <path d="M -30,-30 L -5,-35 L -5,-5 L -30,-5 Z M 5,-35 L 30,-40 L 30,-5 L 5,-5 Z M -30,5 L -5,5 L -5,35 L -30,30 Z M 5,5 L 30,5 L 30,40 L 5,35 Z" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Progress Bar -->
+    <rect x="180" y="210" width="240" height="14" rx="7" fill="#0F172A" opacity="0.6"/>
+    <rect x="180" y="210" width="180" height="14" rx="7" fill="url(#accentCyan)"/>
+    <text x="300" y="202" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" fill="#FFFFFF" text-anchor="middle">FORMATAÇÃO 100% LIMPA (85%)</text>
+
+    <!-- Laptop Base Keyboard -->
+    <path d="M 80,280 L 520,280 L 550,310 L 50,310 Z" fill="#0F172A" stroke="#334155" stroke-width="3"/>
+    <!-- Trackpad -->
+    <rect x="260" y="285" width="80" height="20" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+  </g>
+
+  <!-- Glowing Badges -->
+  <g transform="translate(60, 50)">
+    <rect x="0" y="0" width="130" height="36" rx="18" fill="#10B981" opacity="0.9"/>
+    <text x="65" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" fill="#FFFFFF" text-anchor="middle">✓ ZERO PERDA</text>
+  </g>
+
+  <g transform="translate(420, 320)">
+    <rect x="0" y="0" width="140" height="36" rx="18" fill="#7C3AED" opacity="0.9"/>
+    <text x="70" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" fill="#FFFFFF" text-anchor="middle">⚡ SSD + WINDOWS 11</text>
+  </g>
+</svg>

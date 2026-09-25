@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="purpleOvalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B46C1"/>
+      <stop offset="50%" stop-color="#4C35A8"/>
+      <stop offset="100%" stop-color="#321D7A"/>
+    </linearGradient>
+
+    <linearGradient id="yellowSwooshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEA66"/>
+      <stop offset="100%" stop-color="#FFB700"/>
+    </linearGradient>
+
+    <linearGradient id="redTextGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D"/>
+      <stop offset="100%" stop-color="#D91B1B"/>
+    </linearGradient>
+
+    <filter id="glowShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#4C35A8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#glowShadow)">
+    <!-- Main Oval Purple Badge -->
+    <ellipse cx="240" cy="135" rx="140" ry="80" transform="rotate(-15 240 135)" fill="url(#purpleOvalGrad)" stroke="#8561E8" stroke-width="3"/>
+
+    <!-- Yellow Crescent Swoosh -->
+    <path d="M 125,140 C 120,195 210,222 300,162 C 250,196 155,190 145,145 C 140,118 162,96 185,84 C 152,95 127,112 125,140 Z" fill="url(#yellowSwooshGrad)"/>
+
+    <!-- HG White Letters with Contour -->
+    <g transform="translate(155, 174) rotate(-9)">
+      <!-- Outer Dark Stroke -->
+      <text x="0" y="0" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="96" fill="none" stroke="#211252" stroke-width="14" stroke-linejoin="round">HG</text>
+      <!-- Inner White Fill -->
+      <text x="0" y="0" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="96" fill="#FFFFFF">HG</text>
+    </g>
+
+    <!-- Spaço Cursive Red Script Text -->
+    <g transform="translate(45, 110) rotate(-18)">
+      <!-- Outer White Border -->
+      <text x="0" y="0" font-family="'Pacifico', 'Dancing Script', 'Brush Script MT', cursive, sans-serif" font-weight="bold" font-size="82" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">Spaço</text>
+      <!-- Dark Red Shadow Border -->
+      <text x="0" y="0" font-family="'Pacifico', 'Dancing Script', 'Brush Script MT', cursive, sans-serif" font-weight="bold" font-size="82" fill="none" stroke="#800A0A" stroke-width="4" stroke-linejoin="round">Spaço</text>
+      <!-- Red Fill -->
+      <text x="0" y="0" font-family="'Pacifico', 'Dancing Script', 'Brush Script MT', cursive, sans-serif" font-weight="bold" font-size="82" fill="url(#redTextGrad)">Spaço</text>
+    </g>
+  </g>
+</svg>
